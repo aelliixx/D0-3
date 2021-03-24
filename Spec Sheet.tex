@@ -1,0 +1,113 @@
+\documentclass{article}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\title{\textbf{$\Delta$0:3 Spec Sheet}}
+\author{Donatas Mockus}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Firmware Features}
+\begin{itemize}
+	\item Bluetooth remote control.
+	
+	Set the \textit{Activation} switch to \textit{Armed} position for the unit to be activated remotely via bluetooth.
+	\item Programmable output wattage.
+	\item Programmable output voltage.
+	\item Timed activation.
+	\item Automatic fuse resistance check.
+	\item Calibrator for output cable resistance.
+	
+	The user would have to manually enter the resistance of the output wires leading to and back from the fuse in order to have accurate power regulation.
+	\item Password protected access, activation, and or deactivation.
+	
+	Passwords are stored on the Atmega EEPROM.
+	\item Timed pulse setting for outputting current for a selected time.
+	\item Timer post-countdown for measuring when the fuse blows out.
+	\item Fuse current, voltage potential, resistance, and output power display.
+	\item Stealth mode, shuts screen and any LEDs down during operation.
+	\item Battery voltage display.
+
+
+
+\end{itemize}
+
+
+
+\section{Hardware Features}
+\begin{itemize}
+	\item \textit{Atmega2560} microprocessor.
+	\item OLED or LCD display.
+	
+	Size debatable.
+	\item Bluetooth module allowing for remote controll of the unit.
+	\item External power connection.
+	\item Internal \textit{18650} battery.
+	
+	Independant internal power allowing for a fully integrated operation of the unit. A switch allows you to select either internal or external 	battery mode.
+	\item Boost converter to step up input voltage.
+	\item PWM late stage MOSFET voltage regulator to step down output voltage and controll the output power.
+	\item \textit{ACS712} or \textit{ACS758} hall effect current sensor for measuring output current.
+	\item Internal battery charging protection.
+	\item Buck converters for powering internal devices.
+	\item Rotary encoder for navigating menus.
+	\item External USB connector allowing for easy interface for reflashing firmware without disassembling the unit.
+	\item Three pole DPDT
+	\item Buzzer.
+	\item Reverse polarity protection.
+	\item GX16 connectors.
+	\item Extruded aluminium case.
+\end{itemize}
+
+
+\section{Considered Features}
+
+\begin{itemize}
+	\item SMT components
+	Pros:
+	\begin{itemize}
+		\item Smaller form factor.
+	\end{itemize}
+	Cons:
+	\begin{itemize}
+		\item Requiring ordering of new parts and additional costs.
+		\item Questionable ability to solder them.
+	\end{itemize}
+\end{itemize}
+
+
+
+\section{Bill of Materials}
+%To purchase:
+Already acquired:
+
+\begin{itemize}
+	\item Extruded aluminium enclosure, 120x97x40.
+	\item PCB.
+	\item 1.8" LCD.
+	\item 12 button keypad.
+	\item DPDT switch, optional protextive cover.
+	\item Buck converters.
+	\item Boost converter/s.
+	\item 18650 battery (x2).
+	\item 18650 battery charging protection.
+	\item 18650 battery holder.
+	\item Bluetooth module.
+	\item USB female connector.
+	\item Hall current sensor.
+	\item Voltage sensors (x2).
+	\item MOSFETs.
+	\item Rotary encoder.
+	\item XH-25 pin headers.
+	\item Atmega2560 arduino compatible board.
+	\item Necessary caps and resistors.
+	\item DPDT mini switches.
+	\item Relays.
+	\item LEDs.
+	\item Buzzer.
+\end{itemize}
+
+
+
+
+\end{document}
