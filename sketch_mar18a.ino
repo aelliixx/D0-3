@@ -5,9 +5,11 @@ SevSeg sevseg;
 
 
 unsigned long startTime = 0;
+unsigned long buzzTime = 0;
 
 float potA;
 float timer = 60;
+int f = 440;
 
 
 void setup()
@@ -73,10 +75,16 @@ void loop()
  {
    timer = 0;
    digitalWrite(12, HIGH);
+  if (millis() - buzzTime >= 250 && analogRead(21) > 5)
+  {
+   tone(15, 880, 125);
+   buzzTime = millis();
+  }
  }
  else
  {
    digitalWrite(12, LOW);    
  }
+ 
 
 }
